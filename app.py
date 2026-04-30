@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 @app.route('/')
 def home():
-    return jsonify({"message": "Version 1 - Healthcare App", "status": "running"})
+    return jsonify({"message": "Version 1 - Healthcare App created", "status": "running"})
 
 @app.route('/health')
 def health():
