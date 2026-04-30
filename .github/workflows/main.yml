@@ -12,10 +12,10 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Build Docker Image
-      run: docker build -t ${{ secrets.DOCKER_USER }}/healthcare-app:latest .
+      run: docker build -t gideon9900/healthcare-app:latest .
 
     - name: Login to DockerHub
-      run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_PASS }}" | docker login -u "gideon9900" --password-stdin
 
     - name: Push Docker Image
-      run: docker push ${{ secrets.DOCKER_USER }}/healthcare-app:latest
+      run: docker push gideon9900/healthcare-app:latest
